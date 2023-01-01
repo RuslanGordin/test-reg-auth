@@ -6,10 +6,11 @@ export const InputSC = styled.input`
   height: fit-content;
   font-size: 18px;
   padding: 10px 14px;
-  border: 4px solid #35ff22;
+  border: 3px solid #35ff22;
   user-select: none;
   background: initial;
   color: #35ff22;
+  outline: none;
   ::placeholder {
     color: #59a65d;
   }
