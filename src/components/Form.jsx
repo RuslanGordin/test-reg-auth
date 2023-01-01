@@ -1,25 +1,30 @@
 import React, { useState } from "react";
+import {
+  InputSC,
+  DivBoxFormSC,
+  ButtonSC,
+} from "../styled-components/styled.login";
 
 const Form = ({ title, handleClick }) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
   return (
-    <div>
-      <input
+    <DivBoxFormSC>
+      <InputSC
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="email"
       />
-      <input
+      <InputSC
         type="password"
         value={pass}
         onChange={(e) => setPass(e.target.value)}
         placeholder="password"
       />
-      <button onClick={() => handleClick(email, pass)}>{title}</button>
-    </div>
+      <ButtonSC onClick={() => handleClick(email, pass)}>{title}</ButtonSC>
+    </DivBoxFormSC>
   );
 };
 

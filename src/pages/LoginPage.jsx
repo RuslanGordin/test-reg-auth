@@ -1,16 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Login } from "../components/Login";
+import { DivBoxContentSC } from "../styled-components/styled.homePage";
+import { LinkDecSC, TextSC } from "../styled-components/styled.login";
 
 const LoginPage = () => {
   return (
-    <div>
-      <h1>Login</h1>
+    <DivBoxContentSC>
+      <TextSC>Login</TextSC>
       <Login />
-      <p>
-        Or <Link to="/register">register</Link>
+      <p
+        style={{
+          display: "grid",
+          gridTemplateColumns: "max-content max-content",
+          gap: "10px",
+        }}
+      >
+        <div style={{ color: "gray", fontSize: "20px" }}>Or</div>{" "}
+        <LinkDecSC to="/register">Register</LinkDecSC>
       </p>
-    </div>
+    </DivBoxContentSC>
   );
 };
 

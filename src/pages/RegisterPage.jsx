@@ -1,16 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SignUp from "../components/SignUp";
+import { DivBoxContentSC } from "../styled-components/styled.homePage";
+import { LinkDecSC, TextSC } from "../styled-components/styled.login";
 
 const RegisterPage = () => {
   return (
-    <div>
-      <h1>Register</h1>
+    <DivBoxContentSC>
+      <TextSC>Registeration</TextSC>
       <SignUp />
-      <p>
-        Already have an account? <Link to="/login">Sign in</Link>
+      <p
+        style={{
+          display: "grid",
+          gridTemplateColumns: "max-content max-content",
+          gap: "10px",
+        }}
+      >
+        <div style={{ color: "gray", fontSize: "20px" }}>
+          Already have an account?
+        </div>{" "}
+        <LinkDecSC to="/login">Sign in</LinkDecSC>
       </p>
-    </div>
+    </DivBoxContentSC>
   );
 };
 

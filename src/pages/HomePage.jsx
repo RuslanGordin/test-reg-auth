@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { Redirect, Switch } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth";
 import { useDispatch } from "react-redux";
 import { removeUser } from "../store/slices/userSlice";
+import { DivBoxContentSC } from "../styled-components/styled.homePage";
+import { TextSC } from "../styled-components/styled.login";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -17,12 +18,12 @@ const HomePage = () => {
   }, [isAuth]);
 
   return (
-    <div>
-      <h1>Welcome</h1>
+    <DivBoxContentSC>
+      <TextSC>Welcome!</TextSC>
       <button onClick={() => dispatch(removeUser())}>
         Log out from {email}
       </button>
-    </div>
+    </DivBoxContentSC>
   );
 };
 
